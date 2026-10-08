@@ -1,0 +1,26 @@
+[project]
+name = "vm-asset-inventory"
+version = "0.1.0"
+description = "Modular VM asset inventory collector for Nutanix and VMware"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "IT Team" }
+]
+dependencies = [
+    "requests>=2.31.0",
+    "pyyaml>=6.0.1",
+    "tenacity>=8.2.3",
+    "pyvmomi>=8.0.0.1",
+    "pyodbc>=5.2.0"
+]
+
+[project.scripts]
+vm-asset-inventory = "vm_asset_inventory.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vm_asset_inventory"]

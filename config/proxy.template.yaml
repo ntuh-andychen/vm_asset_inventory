@@ -1,0 +1,17 @@
+enabled: true
+default_profile: corp_proxy
+profiles:
+  corp_proxy:
+    http_proxy: http://host132.example.com:3128
+    https_proxy: http://host132.example.com:3128
+    no_proxy: localhost,127.0.0.1,.host154.example.com
+  no_proxy:
+    http_proxy: ''
+    https_proxy: ''
+    no_proxy: localhost,127.0.0.1
+feature_bindings:
+  offline_download: corp_proxy
+  dependency_download: corp_proxy
+  version_check: corp_proxy
+  nutanix_api: no_proxy
+  vmware_api: no_proxy

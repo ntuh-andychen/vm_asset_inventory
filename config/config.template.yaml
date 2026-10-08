@@ -1,0 +1,6 @@
+general:
+  output_dir: output
+  timeout_seconds: 30
+modules:
+  source_credentials_file: config/source_credentials.yaml
+  proxy_file: ../../shared_proxy/proxy.yaml
